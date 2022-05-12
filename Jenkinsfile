@@ -7,7 +7,7 @@ pipeline{
                 }
             }
 stage('git'){steps{git branch: 'main', url: 'https://github.com/cepGH1/thursday2.git'}}
-stage('run shell'){steps{sh myscript.sh}}
+stage('run shell'){steps{sh 'sh myscript.sh'}}
             stage('Make Files'){
                 steps{
                     sh "touch ~/thurs-2/file1 "
